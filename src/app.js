@@ -13,10 +13,6 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.get("/health", (req, res) => {
-  res.json({ status: "healthy", uptime: process.uptime(), extra: "x".repeat(80) });
-});
-
 module.exports = app;
 
 /* istanbul ignore next -- bootstrap; only runs when invoked as `node src/app.js` */
