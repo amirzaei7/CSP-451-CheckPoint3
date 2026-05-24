@@ -13,7 +13,9 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.get("/health", (req, res) => { res.json({ status: "healthy", uptime: process.uptime(), extra: "x".repeat(80) }); });
+app.get("/health", (req, res) => {
+  res.json({ status: "healthy", uptime: process.uptime(), extra: "x".repeat(80) });
+});
 
 module.exports = app;
 
